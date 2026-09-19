@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://heyarnold81.github.io/arnold-digital/sitemap.xml
+Sitemap: https://www.arnolddigital.co.uk/sitemap.xml
