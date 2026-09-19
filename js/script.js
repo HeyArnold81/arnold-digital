@@ -427,13 +427,7 @@ try {
 
     form.reset();
     updateMessageCount();
-  } else {
-    showFormStatus(
-      result.message ||
-      "The form passed validation, but no email was sent because the site is in development mode.",
-      "success"
-    );
-  }
+    }
 
 
 } catch (error) {
@@ -461,7 +455,6 @@ try {
   submissionInProgress = false;
 }
 
-    submissionInProgress = false;
   });
 
 });
