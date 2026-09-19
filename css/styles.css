@@ -1723,28 +1723,17 @@ select[aria-invalid="true"] {
 @media (max-width: 50rem) {
   .header-inner {
     min-height: 4.25rem;
+    flex-wrap: wrap;
   }
 
-  .nav-toggle {
-    display: grid;
-  }
-
+  /*
+   * No-JavaScript fallback:
+   * navigation remains visible and usable.
+   */
   .primary-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    display: none;
-    max-height: calc(100vh - 4.25rem);
-    overflow-y: auto;
-    padding: var(--space-6) var(--container-padding);
-    border-bottom: 1px solid var(--colour-border);
-    background: var(--colour-background);
-    box-shadow: var(--shadow-md);
-  }
-
-  .primary-nav.is-open {
     display: block;
+    width: 100%;
+    padding-bottom: var(--space-5);
   }
 
   .primary-nav ul {
@@ -1768,6 +1757,36 @@ select[aria-invalid="true"] {
     width: 100%;
   }
 
+  /*
+   * Enhanced navigation when JavaScript is available.
+   */
+  .js .header-inner {
+    flex-wrap: nowrap;
+  }
+
+  .js .nav-toggle {
+    display: grid;
+  }
+
+  .js .primary-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    width: auto;
+    max-height: calc(100vh - 4.25rem);
+    overflow-y: auto;
+    padding: var(--space-6) var(--container-padding);
+    border-bottom: 1px solid var(--colour-border);
+    background: var(--colour-background);
+    box-shadow: var(--shadow-md);
+  }
+
+  .js .primary-nav.is-open {
+    display: block;
+  }
+
   .nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(1) {
     transform: translateY(0.43rem) rotate(45deg);
   }
@@ -1789,7 +1808,6 @@ select[aria-invalid="true"] {
     flex-direction: column;
   }
 }
-
 
 /* =========================================================
    SMALL MOBILE
@@ -2034,4 +2052,38 @@ select[aria-invalid="true"] {
   .section {
     padding-block: 2rem;
   }
+}
+/* =========================================================
+   404 PAGE
+   ========================================================= */
+
+.error-page {
+  display: grid;
+  min-height: calc(100vh - 12rem);
+  place-items: center;
+  padding-block: var(--space-20);
+}
+
+.error-page-inner {
+  max-width: 48rem;
+}
+
+.error-page h1 {
+  max-width: 10ch;
+  margin-bottom: var(--space-6);
+  color: var(--colour-ink);
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 790;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.error-page p:not(.eyebrow) {
+  max-width: 38rem;
+  margin-bottom: var(--space-8);
+  font-size: var(--text-md);
+}
+
+.error-footer {
+  padding-top: 0;
 }
