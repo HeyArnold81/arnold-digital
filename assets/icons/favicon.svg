@@ -1,0 +1,23 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+>
+  <rect
+    width="64"
+    height="64"
+    rx="12"
+    fill="#0f172a"
+  />
+
+  <path
+    d="M18 48L28.5 16h7L46 48h-7l-2.4-8H27.2L25 48h-7zm11-14h6l-3-10.5L29 34z"
+    fill="#ffffff"
+  />
+
+  <circle
+    cx="47"
+    cy="17"
+    r="5"
+    fill="#0f766e"
+  />
+</svg>
