@@ -1389,6 +1389,11 @@ blockquote:last-child {
   font-weight: 700;
 }
 
+.field-optional {
+  color: var(--colour-muted);
+  font-weight: 400;
+}
+
 input,
 textarea,
 select {
