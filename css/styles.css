@@ -2087,3 +2087,517 @@ select[aria-invalid="true"] {
 .error-footer {
   padding-top: 0;
 }
+/* =========================================================
+   PORTFOLIO CONCEPT PREVIEWS
+   ========================================================= */
+
+.demo-address {
+  max-width: 48%;
+  padding: 0.2rem 0.7rem;
+  margin-left: auto;
+  overflow: hidden;
+  background: var(--colour-white);
+  border-radius: 999px;
+  color: var(--colour-muted);
+  font-size: 0.55rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.demo-site {
+  position: relative;
+  min-height: clamp(25rem, 42vw, 34rem);
+  overflow: hidden;
+}
+
+.demo-site span,
+.demo-site strong,
+.demo-site p {
+  position: relative;
+  z-index: 2;
+}
+
+.demo-kicker {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.demo-cta {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.6rem 0.9rem;
+  margin-top: 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.project-note {
+  margin-top: var(--space-5);
+  color: var(--colour-muted);
+  font-size: var(--text-xs) !important;
+  font-weight: 650;
+}
+
+
+/* ---------------------------------------------------------
+   ALDER & STONE
+   --------------------------------------------------------- */
+
+.demo-landscaping {
+  background: #f3efe4;
+  color: #17372d;
+}
+
+.demo-landscaping-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.demo-landscaping-nav strong {
+  margin-right: auto;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  letter-spacing: -0.03em;
+}
+
+.demo-landscaping-nav strong i {
+  color: #8b6f47;
+  font-weight: 400;
+}
+
+.demo-landscaping-nav > span {
+  font-size: 0.55rem;
+  font-weight: 650;
+}
+
+.demo-landscaping-hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1rem;
+  min-height: 20rem;
+  padding: 1.5rem;
+}
+
+.demo-landscaping-copy {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.demo-landscaping-copy > strong {
+  max-width: 8ch;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+.demo-landscaping-copy p {
+  max-width: 22rem;
+  margin: 1rem 0 0;
+  color: #52675f;
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.demo-landscaping-copy .demo-cta {
+  background: #17372d;
+  color: #ffffff;
+}
+
+.demo-landscaping-image {
+  position: relative;
+  min-height: 18rem;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      #a8c0b1 0%,
+      #dce4d7 44%,
+      #9aac73 45%,
+      #829866 100%
+    );
+  border-radius: 0.25rem;
+}
+
+.garden-wall {
+  position: absolute;
+  right: 0;
+  bottom: 22%;
+  width: 72%;
+  height: 34%;
+  background: #c7b69d;
+  clip-path: polygon(10% 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.garden-lawn {
+  position: absolute;
+  right: -8%;
+  bottom: -5%;
+  width: 90%;
+  height: 42%;
+  background: #6f8857;
+  border-radius: 50% 0 0 0;
+  transform: rotate(-4deg);
+}
+
+.garden-path {
+  position: absolute;
+  bottom: -12%;
+  left: 8%;
+  width: 38%;
+  height: 65%;
+  background: #d6c9b4;
+  clip-path: polygon(30% 0, 64% 0, 100% 100%, 0 100%);
+}
+
+.garden-plant {
+  position: absolute;
+  width: 4rem;
+  height: 5rem;
+  background: #36543c;
+  border-radius: 50% 35% 55% 45%;
+}
+
+.garden-plant-one {
+  right: 5%;
+  bottom: 25%;
+}
+
+.garden-plant-two {
+  top: 19%;
+  left: 4%;
+  transform: scale(0.7);
+}
+
+.demo-landscaping-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgb(23 55 45 / 0.16);
+}
+
+.demo-landscaping-services > div {
+  padding: 1rem;
+  border-right: 1px solid rgb(23 55 45 / 0.16);
+}
+
+.demo-landscaping-services > div:last-child {
+  border-right: 0;
+}
+
+.demo-landscaping-services span,
+.demo-landscaping-services strong {
+  display: block;
+}
+
+.demo-landscaping-services span {
+  margin-bottom: 0.3rem;
+  color: #8b6f47;
+  font-family: var(--font-mono);
+  font-size: 0.45rem;
+}
+
+.demo-landscaping-services strong {
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+
+/* ---------------------------------------------------------
+   NORTHLINE ELECTRICAL
+   --------------------------------------------------------- */
+
+.demo-electrical {
+  background: #111111;
+  color: #ffffff;
+}
+
+.demo-electrical::after {
+  position: absolute;
+  top: -12%;
+  right: -15%;
+  width: 60%;
+  height: 80%;
+  border: 5rem solid rgb(245 158 11 / 0.07);
+  content: "";
+  transform: rotate(18deg);
+}
+
+.demo-electrical-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 1.5rem;
+  border-bottom: 1px solid #313131;
+}
+
+.demo-electrical-nav strong {
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.demo-electrical-nav strong span {
+  color: #f59e0b;
+}
+
+.demo-electrical-nav div {
+  display: flex;
+  gap: 1rem;
+}
+
+.demo-electrical-nav div span {
+  color: #c9c9c9;
+  font-size: 0.5rem;
+}
+
+.demo-electrical-hero {
+  position: relative;
+  padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+}
+
+.electrical-badge {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid #f59e0b;
+  color: #f59e0b;
+  font-size: 0.42rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.demo-electrical-hero .demo-kicker {
+  color: #f59e0b;
+}
+
+.demo-electrical-hero > strong {
+  display: block;
+  max-width: 8ch;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-weight: 900;
+  letter-spacing: -0.065em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.demo-electrical-hero p {
+  max-width: 20rem;
+  margin-block: 1rem;
+  color: #b6b6b6;
+  font-size: 0.68rem;
+}
+
+.electrical-cta {
+  background: #f59e0b;
+  color: #111111;
+}
+
+.demo-electrical-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f59e0b;
+  color: #111111;
+}
+
+.demo-electrical-strip div {
+  padding: 1rem;
+  border-right: 1px solid rgb(17 17 17 / 0.25);
+}
+
+.demo-electrical-strip div:last-child {
+  border-right: 0;
+}
+
+.demo-electrical-strip strong,
+.demo-electrical-strip span {
+  display: block;
+}
+
+.demo-electrical-strip strong {
+  margin-bottom: 0.2rem;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+}
+
+.demo-electrical-strip span {
+  font-size: 0.48rem;
+}
+
+
+/* ---------------------------------------------------------
+   FIELD & FINCH
+   --------------------------------------------------------- */
+
+.demo-professional {
+  background: #f6f1e8;
+  color: #1b2941;
+}
+
+.demo-professional-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.5rem;
+  border-bottom: 1px solid #d8d1c4;
+}
+
+.demo-professional-nav strong {
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.demo-professional-nav strong span {
+  color: #9a7650;
+}
+
+.demo-professional-nav div {
+  display: flex;
+  gap: 1rem;
+}
+
+.demo-professional-nav div span {
+  font-size: 0.5rem;
+}
+
+.demo-professional-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 2rem;
+  min-height: 23rem;
+  padding: 2rem 1.5rem;
+}
+
+.demo-professional-hero .demo-kicker {
+  color: #9a7650;
+}
+
+.demo-professional-hero strong {
+  display: block;
+  max-width: 11ch;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.demo-professional-hero p {
+  max-width: 24rem;
+  margin-block: 1rem;
+  color: #596274;
+  font-size: 0.67rem;
+  line-height: 1.6;
+}
+
+.demo-professional-link {
+  color: #9a7650;
+  font-family: Georgia, serif;
+  font-size: 0.65rem;
+}
+
+.professional-monogram {
+  display: grid;
+  width: min(14rem, 100%);
+  aspect-ratio: 1;
+  place-items: center;
+  justify-self: end;
+  border: 1px solid #b7aa98;
+  border-radius: 50%;
+  color: #1b2941;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.professional-monogram span {
+  margin-inline: 0.15em;
+  color: #9a7650;
+  font-size: 0.7em;
+}
+
+.demo-professional-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #d8d1c4;
+}
+
+.demo-professional-footer span {
+  padding: 1rem;
+  border-right: 1px solid #d8d1c4;
+  font-family: Georgia, serif;
+  font-size: 0.57rem;
+  text-align: center;
+}
+
+.demo-professional-footer span:last-child {
+  border-right: 0;
+}
+
+
+/* =========================================================
+   PORTFOLIO PREVIEW RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 38rem) {
+  .demo-address {
+    display: none;
+  }
+
+  .demo-site {
+    min-height: 25rem;
+  }
+
+  .demo-landscaping-nav > span,
+  .demo-electrical-nav div,
+  .demo-professional-nav div {
+    display: none;
+  }
+
+  .demo-landscaping-hero,
+  .demo-professional-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-landscaping-image {
+    min-height: 11rem;
+  }
+
+  .demo-landscaping-copy > strong,
+  .demo-electrical-hero > strong,
+  .demo-professional-hero strong {
+    font-size: 2.25rem;
+  }
+
+  .professional-monogram {
+    display: none;
+  }
+
+  .demo-landscaping-services,
+  .demo-electrical-strip,
+  .demo-professional-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-landscaping-services > div:not(:first-child),
+  .demo-electrical-strip div:not(:first-child),
+  .demo-professional-footer span:not(:first-child) {
+    display: none;
+  }
+
+  .electrical-badge {
+    display: none;
+  }
+}
