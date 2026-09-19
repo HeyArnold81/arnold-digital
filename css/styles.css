@@ -1058,7 +1058,7 @@ blockquote:last-child {
 }
 
 .digital-callout .eyebrow {
-  color: #99f6e4;
+  color: #ccfbf1;
 }
 
 .digital-callout h2 {
@@ -2306,11 +2306,10 @@ select[aria-invalid="true"] {
 
 .demo-landscaping-services span {
   margin-bottom: 0.3rem;
-  color: #8b6f47;
+  color: #765836;
   font-family: var(--font-mono);
   font-size: 0.45rem;
 }
-
 .demo-landscaping-services strong {
   font-family: Georgia, serif;
   font-size: 0.7rem;
@@ -2487,7 +2486,7 @@ select[aria-invalid="true"] {
 }
 
 .demo-professional-hero .demo-kicker {
-  color: #9a7650;
+  color: #735436;
 }
 
 .demo-professional-hero strong {
@@ -2509,7 +2508,7 @@ select[aria-invalid="true"] {
 }
 
 .demo-professional-link {
-  color: #9a7650;
+  color: #735436;
   font-family: Georgia, serif;
   font-size: 0.65rem;
 }
