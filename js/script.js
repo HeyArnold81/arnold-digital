@@ -5,8 +5,6 @@
  * When JavaScript is available, CSS converts it into the
  * collapsible mobile navigation.
  */
-document.documentElement.classList.add("js");
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
