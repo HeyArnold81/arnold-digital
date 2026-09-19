@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let submissionInProgress = false;
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     clearFormStatus();
@@ -389,24 +389,77 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /*
-     * DEVELOPMENT PLACEHOLDER
-     *
-     * No data is transmitted yet.
-     *
-     * This block will be replaced with the production
-     * form-processing integration before launch.
-     */
+try {
+  const formData = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  let result;
+
+  try {
+    result = await response.json();
+  } catch {
+    throw new Error(
+      "The server returned an unexpected response."
+    );
+  }
+
+
+  if (!response.ok || !result.success) {
+    throw new Error(
+      result.message ||
+      "Your enquiry could not be sent."
+    );
+  }
+
+
+  if (result.delivered) {
     showFormStatus(
-      "Everything looks good. The form is currently in development mode, so your enquiry has not been sent anywhere yet.",
+      "Thanks. Your enquiry has been sent. I'll get back to you as soon as I can.",
       "success"
     );
 
+    form.reset();
+    updateMessageCount();
+  } else {
+    showFormStatus(
+      result.message ||
+      "The form passed validation, but no email was sent because the site is in development mode.",
+      "success"
+    );
+  }
 
-    if (submitButton) {
-      submitButton.disabled = false;
-      submitButton.textContent = "Send Enquiry";
-    }
+
+} catch (error) {
+
+  showFormStatus(
+    error.message ||
+    "Something went wrong. Please try again.",
+    "error"
+  );
+
+} finally {
+
+  if (
+    window.turnstile &&
+    typeof window.turnstile.reset === "function"
+  ) {
+    window.turnstile.reset();
+  }
+
+  if (submitButton) {
+    submitButton.disabled = false;
+    submitButton.textContent = "Send Enquiry";
+  }
+
+  submissionInProgress = false;
+}
 
     submissionInProgress = false;
   });
