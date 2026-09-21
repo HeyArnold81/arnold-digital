@@ -377,26 +377,13 @@ blockquote:last-child {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  color: var(--colour-ink);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  flex-shrink: 0;
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 2.25rem;
-  height: 2.25rem;
-  place-items: center;
-  background: var(--colour-ink);
-  color: var(--colour-white);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-md);
-}
-
-.brand-text {
-  font-size: 1.05rem;
+.brand-logo {
+  width: clamp(10.75rem, 18vw, 13.75rem);
+  height: auto;
 }
 
 .primary-nav {
