@@ -368,10 +368,11 @@ blockquote:last-child {
 
 .header-inner {
   display: flex;
-  min-height: 4.75rem;
+  min-height: 5rem;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
+  padding-block: 0.35rem;
 }
 
 .brand {
@@ -382,8 +383,11 @@ blockquote:last-child {
 }
 
 .brand-logo {
-  width: clamp(10.75rem, 18vw, 13.75rem);
+  display: block;
+  width: clamp(10.5rem, 18vw, 13rem);
   height: auto;
+  max-height: 3.25rem;
+  object-fit: contain;
 }
 
 .primary-nav {
