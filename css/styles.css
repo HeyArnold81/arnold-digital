@@ -386,7 +386,6 @@ blockquote:last-child {
   display: block;
   width: clamp(10.5rem, 18vw, 13rem);
   height: auto;
-  max-height: 3.25rem;
   object-fit: contain;
 }
 
@@ -1536,6 +1535,7 @@ select[aria-invalid="true"] {
 }
 .brand-logo-footer {
   width: min(13rem, 100%);
+  height: auto;
 }
 
 .brand-footer .brand-mark {
