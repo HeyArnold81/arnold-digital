@@ -1534,6 +1534,9 @@ select[aria-invalid="true"] {
   margin-bottom: var(--space-5);
   color: var(--colour-white);
 }
+.brand-logo-footer {
+  width: min(13rem, 100%);
+}
 
 .brand-footer .brand-mark {
   background: var(--colour-primary);
