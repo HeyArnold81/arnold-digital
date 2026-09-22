@@ -456,3 +456,84 @@ try {
   });
 
 });
+
+/*
+ * Lead attribution.
+ *
+ * Preserve the visitor's original landing page,
+ * referrer and UTM values for the current session.
+ */
+(() => {
+  const form = document.querySelector(
+    'form[action="https://api.arnolddigital.co.uk"]'
+  );
+
+  if (!form) {
+    return;
+  }
+
+  const params = new URLSearchParams(
+    window.location.search
+  );
+
+  const captureOnce = (key, value) => {
+    const existing =
+      sessionStorage.getItem(key);
+
+    if (existing !== null) {
+      return existing;
+    }
+
+    sessionStorage.setItem(
+      key,
+      value || ""
+    );
+
+    return value || "";
+  };
+
+  const landingPage = captureOnce(
+    "ad_landing_page",
+    window.location.href
+  );
+
+  const referrer = captureOnce(
+    "ad_referrer",
+    document.referrer
+  );
+
+  const utmSource = captureOnce(
+    "ad_utm_source",
+    params.get("utm_source")
+  );
+
+  const utmMedium = captureOnce(
+    "ad_utm_medium",
+    params.get("utm_medium")
+  );
+
+  const utmCampaign = captureOnce(
+    "ad_utm_campaign",
+    params.get("utm_campaign")
+  );
+
+  const values = {
+    landingPage,
+    referrer,
+    utmSource,
+    utmMedium,
+    utmCampaign,
+  };
+
+  for (
+    const [name, value] of
+    Object.entries(values)
+  ) {
+    const field =
+      form.elements.namedItem(name);
+
+    if (field) {
+      field.value = value;
+    }
+  }
+})();
