@@ -7,12 +7,25 @@ import { minify as minifyJs } from "terser";
 const ROOT = process.cwd();
 const OUTPUT = path.join(ROOT, "dist");
 
-const IGNORE = new Set([
-  ".git",
-  "node_modules",
-  "dist",
-  "scripts",
-  "AGENTS.md",
+// Only these root entries belong in the published website.
+const PUBLIC_ENTRIES = new Set([
+  "index.html",
+  "privacy.html",
+  "404.html",
+  "robots.txt",
+  "sitemap.xml",
+  "_headers",
+  "CNAME",
+  ".nojekyll",
+  "assets",
+  "css",
+  "js",
+  "demos",
+]);
+
+const PUBLIC_EXTENSIONS = new Set([
+  ".html", ".css", ".js", ".svg", ".webp", ".png", ".jpg",
+  ".jpeg", ".gif", ".ico", ".avif", ".woff", ".woff2", ".ttf",
 ]);
 
 async function buildDirectory(source, destination) {
@@ -25,24 +38,11 @@ async function buildDirectory(source, destination) {
   });
 
   for (const entry of entries) {
-    if (
-      source === ROOT &&
-      IGNORE.has(entry.name)
-    ) {
-      continue;
-    }
-
-    if (
-      source === ROOT &&
-      entry.name === "package.json"
-    ) {
-      continue;
-    }
-
-    if (
-      source === ROOT &&
-      entry.name === "package-lock.json"
-    ) {
+    // Never follow links or publish hidden files and backup formats in assets.
+    if (entry.isSymbolicLink() ||
+        (source === ROOT ? !PUBLIC_ENTRIES.has(entry.name) :
+          entry.name.startsWith(".") ||
+          (entry.isFile() && !PUBLIC_EXTENSIONS.has(path.extname(entry.name).toLowerCase())))) {
       continue;
     }
 
