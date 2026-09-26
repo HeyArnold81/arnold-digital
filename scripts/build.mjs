@@ -12,6 +12,7 @@ const IGNORE = new Set([
   "node_modules",
   "dist",
   "scripts",
+  "AGENTS.md",
 ]);
 
 async function buildDirectory(source, destination) {

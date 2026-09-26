@@ -409,15 +409,20 @@ try {
   }
 
 
-  if (!response.ok || !result.success) {
+  if (!response.ok || !result || result.success !== true) {
     throw new Error(
-      result.message ||
+      result?.message ||
       "Your enquiry could not be sent."
     );
   }
 
 
-  if (result.delivered) {
+  if (result.delivered !== true) {
+    throw new Error(
+      "We couldn't confirm your enquiry was sent. Please email hello@arnolddigital.co.uk or call 07824 885059."
+    );
+  }
+
     showFormStatus(
       "Thanks. Your enquiry has been sent. I'll get back to you as soon as I can.",
       "success"
@@ -425,7 +430,6 @@ try {
 
     form.reset();
     updateMessageCount();
-    }
 
 
 } catch (error) {
