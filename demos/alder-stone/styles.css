@@ -19,6 +19,7 @@
 }
 
 html {
+  scroll-padding-top: 6.5rem;
   scroll-behavior: smooth;
 }
 
@@ -96,6 +97,9 @@ textarea {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   border-bottom: 1px solid var(--border);
   background: rgb(244 240 231 / 0.95);
 }
