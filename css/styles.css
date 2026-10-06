@@ -2861,3 +2861,161 @@ select[aria-invalid="true"] {
     position: static;
   }
 }
+
+/* Distinct concept preview */
+
+.demo-landscaping-hero {
+  position: relative;
+  display: block;
+  min-height: 25rem;
+  overflow: hidden;
+}
+
+.demo-landscaping-image {
+  position: absolute;
+  inset: 0;
+  min-height: 100%;
+}
+
+.demo-landscaping-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(12 35 27 / .88), rgb(12 35 27 / .12));
+}
+
+.demo-landscaping-copy {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 1.5rem;
+  color: white;
+}
+
+.demo-landscaping-copy > strong {
+  color: white;
+  max-width: 12ch;
+}
+
+.demo-landscaping-copy p {
+  color: #e0e8df;
+  max-width: 17rem;
+}
+
+.demo-landscaping-copy .demo-kicker {
+  color: #d9dcc2;
+}
+
+.demo-landscaping-services {
+  grid-template-columns: 1.4fr 1fr 1fr;
+}
+
+.demo-electrical-hero {
+  padding: 2.5rem 47% 2.5rem 1.5rem;
+  min-height: 25rem;
+}
+
+.demo-electrical-hero > strong {
+  font-size: 1.9rem;
+}
+
+.electrical-badge {
+  top: 2.5rem;
+  right: 1rem;
+  width: 39%;
+  padding: 1rem;
+  background: white;
+  color: #111;
+  border: 0;
+  border-top: 4px solid #f59e0b;
+  letter-spacing: 0;
+}
+
+.electrical-badge b {
+  display: block;
+  font-size: .6rem;
+  margin-bottom: 1rem;
+}
+
+.electrical-badge span {
+  display: block;
+  padding: .75rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: .55rem;
+}
+
+.electrical-badge em {
+  display: block;
+  margin-top: 1rem;
+  padding: .65rem .3rem;
+  background: #f59e0b;
+  font-size: .52rem;
+  font-style: normal;
+  text-align: center;
+}
+
+.demo-electrical-strip {
+  grid-template-columns: 1fr;
+}
+
+.demo-electrical-strip div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  border-right: 0;
+  border-bottom: 1px solid #ddd;
+  padding-block: .65rem;
+}
+
+.demo-professional-hero {
+  display: block;
+  min-height: 25rem;
+  padding-block: 3rem;
+}
+
+.demo-professional-hero strong {
+  max-width: 19ch;
+  font-size: clamp(2.5rem, 4.6vw, 4rem);
+}
+
+.demo-professional-hero p {
+  max-width: 17rem;
+  margin-left: auto;
+  margin-top: 1.5rem;
+  border-left: 1px solid #b7aa98;
+  padding-left: 1rem;
+}
+
+.demo-professional-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+@media(max-width: 38rem) {
+  .demo-landscaping-image {
+    display: block;
+  }
+
+  .demo-landscaping-copy > strong {
+    font-size: 2.4rem;
+  }
+
+  .demo-electrical-hero {
+    padding-left: 1rem;
+    padding-right: 45%;
+  }
+
+  .demo-electrical-hero > strong {
+    font-size: 1.6rem;
+  }
+
+  .electrical-badge {
+    right: .65rem;
+    padding: .65rem;
+  }
+
+  .demo-professional-hero strong {
+    font-size: 2.8rem;
+  }
+
+}
