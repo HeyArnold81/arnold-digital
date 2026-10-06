@@ -3019,3 +3019,11 @@ select[aria-invalid="true"] {
   }
 
 }
+
+.electrical-badge .preview-field {
+  padding: 0.6rem 0.4rem;
+  margin-top: 0.6rem;
+  border: 1px solid #aaa;
+  color: #444;
+  font-weight: 400;
+}

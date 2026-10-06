@@ -172,16 +172,32 @@
         </div>
 
 
-        <aside class="callback-panel" aria-labelledby="callback-title">
+        <form class="callback-panel" aria-labelledby="callback-title" action="#" method="get">
           <p class="eyebrow">Let's get it sorted</p>
-          <h2 id="callback-title">What do you need help with?</h2>
-          <p>Choose a service, then tell us about the job.</p>
-          <a href="#contact">Repairs &amp; fault finding <span aria-hidden="true">↗</span></a>
-          <a href="#contact">New fittings &amp; installations <span aria-hidden="true">↗</span></a>
-          <a href="#contact">Inspection &amp; testing <span aria-hidden="true">↗</span></a>
-          <a class="button button-yellow" href="#contact">Request a callback</a>
-          <small>Domestic &amp; commercial enquiries welcome.</small>
-        </aside>
+          <h2 id="callback-title">Request a callback</h2>
+          <p>Leave your details and tell us what you need.</p>
+          <div>
+            <label for="callback-name">Name</label>
+            <input id="callback-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="callback-phone">Telephone</label>
+            <input id="callback-phone" name="telephone" type="tel" autocomplete="tel" required>
+          </div>
+          <div>
+            <label for="callback-service">What do you need help with?</label>
+            <select id="callback-service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Repairs &amp; fault finding</option>
+              <option>New fittings &amp; installations</option>
+              <option>Inspection &amp; testing</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <button class="button button-yellow" type="submit">Request a callback</button>
+          <small>Demonstration form only. No information is submitted.</small>
+          <p class="callback-feedback" role="status" hidden>This is a concept website, so your callback request has not been sent.</p>
+        </form>
 
       </div>
 
@@ -779,5 +795,6 @@
 
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
